@@ -16,10 +16,10 @@ public class Sound
   public int limitAmplitude(int limit) {  
     int valuesChanged = 0;
     for (int i = 0; i < samples.length; i++) {
-      if (samples[i] > 0 && samples[i] > limit) {
+      if (samples[i] > limit) {
         samples[i] = limit;
         valuesChanged++;
-      } else if (samples[i] < 0 && samples[i] < limit) {
+      } else if (samples[i] < -limit) {
         samples[i] = -limit;
         valuesChanged++;
       }
